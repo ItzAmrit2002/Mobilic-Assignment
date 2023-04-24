@@ -15,7 +15,7 @@ console.log('connected to MongoDB server')
 })
 
 const dataRouter = require('./routes/data')
-app.use('/data', dataRouter)
+app.use('/api', dataRouter)
 
 app.listen(port, ()=> {
     console.log("server running on port: ", port)
