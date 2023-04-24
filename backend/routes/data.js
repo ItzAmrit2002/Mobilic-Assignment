@@ -62,10 +62,27 @@ router.get("/fourth", async(req, res) => {
 router.get("/fifth", async(req, res) => {
     try {
         const samples = await Sample.aggregate([
-            { $group: { _id: "$city", totalUsers: { $sum: 1 }, totalIncome: { $sum: "$income" } } },
-            { $sort: { totalUsers: -1 } },
-            { $limit: 10 },
-            { $project: { _id: 0, city: "$_id", averageIncome: { $divide: [ "$totalIncome", "$totalUsers" ] }, totalUsers: 1 } }
+            {
+                $group: {
+                  _id: "$city",
+                  numUsers: { $sum: 1 },
+                  avgIncome: { $avg: "$income" }
+                }
+              },
+              {
+                $sort: { numUsers: -1 }
+              },
+              {
+                $limit: 10
+              },
+              {
+                $project: {
+                  city: "$_id",
+                  numUsers: 1,
+                  avgIncome: 1,
+                  _id: 0
+                }
+              }
           ]);
         res.json(samples);
     } catch (err) {
