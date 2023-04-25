@@ -14,7 +14,7 @@ const First = () => {
 
       const getReq = () => {
 
-        axios.get('http://localhost:8000/api/first', {
+        axios.get('https://mernappbackend-w7a2.onrender.com/api/first', {
         })
         .then((res) => {
           if (res.status === 200) {

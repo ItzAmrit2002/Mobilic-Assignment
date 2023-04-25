@@ -13,7 +13,7 @@ const Fourth = () => {
 
   const getReq = () => {
 
-    axios.get('http://localhost:8000/api/fourth', {
+    axios.get('https://mernappbackend-w7a2.onrender.com/api/fourth', {
     })
     .then((res) => {
       if (res.status === 200) {

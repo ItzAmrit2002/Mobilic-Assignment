@@ -14,7 +14,7 @@ const Second = () => {
 
       const getReq = () => {
 
-        axios.get('http://localhost:8000/api/second', {
+        axios.get('https://mernappbackend-w7a2.onrender.com/api/second', {
         })
         .then((res) => {
           if (res.status === 200) {

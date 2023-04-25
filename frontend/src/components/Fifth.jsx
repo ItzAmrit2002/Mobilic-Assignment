@@ -13,7 +13,7 @@ const Fifth = () => {
 
   const getReq = () => {
 
-    axios.get('http://localhost:8000/api/fifth', {
+    axios.get('https://mernappbackend-w7a2.onrender.com/api/fifth', {
     })
     .then((res) => {
       if (res.status === 200) {
