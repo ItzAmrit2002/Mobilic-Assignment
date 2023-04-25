@@ -32,26 +32,26 @@ return (
     <h3>Users which have a car of brand “BMW”, “Mercedes” or “Audi” and whose email does not include any digit.</h3>
     {getReq()}
     {result.length==0? <h3>Loading...</h3> : <TableContainer component={Paper}>
-  <Table sx={{ minWidth: 650 }} aria-label="simple table">
+  <Table sx={{ minWidth: '90vw', border: 1 }} aria-label="simple table">
     <TableHead>
       <TableRow>
-        <TableCell>Total Users&nbsp;</TableCell>
-        <TableCell align="left">City&nbsp;</TableCell>
-        <TableCell align="left">Average Income&nbsp;</TableCell>
+        <TableCell sx={{ fontWeight: 'bold' }}>Total Users</TableCell>
+        <TableCell align="left" sx={{ fontWeight: 'bold' }}>City&nbsp;</TableCell>
+        <TableCell align="left" sx={{ fontWeight: 'bold' }} >Average Income&nbsp;</TableCell>
         
       </TableRow>
     </TableHead>
     <TableBody>
       {result.map((row) => (
         <TableRow
-          key={row.numUsers}
+          key={row.total_users}
           // sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
         >
           <TableCell component="th" scope="row">
-            {row.numUsers}
+            {row.total_users}
           </TableCell>
           <TableCell align="left">{row.city}</TableCell>
-          <TableCell align="left">{row.avgIncome}</TableCell>
+          <TableCell align="left">${row.average_income}</TableCell>
         </TableRow>
       ))}
     </TableBody>

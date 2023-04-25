@@ -1,0 +1,19 @@
+*{
+    margin: 5px;
+    padding: 0;
+    box-sizing: border-box; 
+    text-align: center;
+}
+h4{
+   
+    color: #121212;
+    text-align: center;
+    margin-top: 3rem;
+    
+}
+h3{
+    color: #121212;
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}

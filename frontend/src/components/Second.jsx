@@ -33,25 +33,25 @@ const Second = () => {
         <h3>Male Users which have phone price greater than 10,000.</h3>
         {getReq()}
         {result.length==0? <h3>Loading...</h3> : <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 650 }} aria-label="simple table">
+      <Table sx={{ minWidth: '90vw', border:1 }} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell>First Name&nbsp;</TableCell>
-            <TableCell align="left">Last Name&nbsp;</TableCell>
-            <TableCell align="left">Car&nbsp;</TableCell>
-            <TableCell align="left">City&nbsp;</TableCell>
-            <TableCell align="left">Income&nbsp;</TableCell>
-            <TableCell align="left">Gender&nbsp;</TableCell>
-            <TableCell align="left">Email&nbsp;</TableCell>
-            <TableCell align="left">Phone Price&nbsp;</TableCell>
-            <TableCell align="left">Quote&nbsp;</TableCell>
+            <TableCell sx={{ fontWeight: 'bold' }}>First Name&nbsp;</TableCell>
+            <TableCell align="left" sx={{ fontWeight: 'bold' }}>Last Name&nbsp;</TableCell>
+            <TableCell align="left" sx={{ fontWeight: 'bold' }}>Car&nbsp;</TableCell>
+            <TableCell align="left" sx={{ fontWeight: 'bold' }}>City&nbsp;</TableCell>
+            <TableCell align="left" sx={{ fontWeight: 'bold' }}>Income&nbsp;</TableCell>
+            <TableCell align="left" sx={{ fontWeight: 'bold' }}>Gender&nbsp;</TableCell>
+            <TableCell align="left" sx={{ fontWeight: 'bold' }}>Email&nbsp;</TableCell>
+            <TableCell align="left" sx={{ fontWeight: 'bold' }}>Phone Price&nbsp;</TableCell>
+            <TableCell align="left" sx={{ fontWeight: 'bold' }}>Quote&nbsp;</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {result.map((row) => (
             <TableRow
               key={row.first_name}
-              sx={{ '&:last-child td, &:last-child th': { border: 1 } }}
+              
             >
               <TableCell component="th" scope="row">
                 {row.first_name}
