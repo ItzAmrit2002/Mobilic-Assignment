@@ -39,7 +39,7 @@ const First = () => {
             <TableCell sx={{ fontWeight: 'bold' }}>First Name&nbsp;</TableCell>
             <TableCell align="left" sx={{ fontWeight: 'bold' }}>Last Name&nbsp;</TableCell>
             <TableCell align="left" sx={{ fontWeight: 'bold' }}>Car&nbsp;</TableCell>
-            <TableCell align="left"sx={{ fontWeight: 'bold' }}>City&nbsp;</TableCell>
+            <TableCell align="left" sx={{ fontWeight: 'bold' }}>City&nbsp;</TableCell>
             <TableCell align="left" sx={{ fontWeight: 'bold' }}>Income&nbsp;</TableCell>
             <TableCell align="left" sx={{ fontWeight: 'bold' }}>Gender&nbsp;</TableCell>
             <TableCell align="left" sx={{ fontWeight: 'bold' }}>Email&nbsp;</TableCell>
